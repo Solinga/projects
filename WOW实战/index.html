@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>wow演示</title>
+		<!--1.引入animate.css-->
+		<link rel="stylesheet" href="css/animate.css" />	
+		<style>
+			*{
+				margin: 0;
+			    padding: 0;
+			}
+			body{
+				overflow: auto;				
+			}
+			.first{
+				margin: 0 auto;				
+			}
+			.first .list1{
+				list-style-type: none;
+				text-align: center;
+			}
+			.first .list1 .wow{
+				width: 300px;
+				height: 300px;
+				/*border-radius: 50%;*/
+				list-style: none;
+				display: inline-block;
+				margin: 30px 15px;
+				vertical-align: center;		
+			}
+			.bg-blue{
+				background: #1daee9;
+			}
+			.bg-purple{
+				background:#c843a5;
+			}
+			.bg-green{
+				background:#5bd5a0;
+			}
+			.bg-yellow{
+				background: #ffcc35;
+			}
+			.bg-red{
+				background: #eb3980;
+			}
+			.bg-pink{
+				background: #e99;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="first">
+			<ul class="list1">
+				<li class="wow bounce bg-blue" data-wow-duration="1.5s"></li>
+				<li class="wow flash bg-purple"></li>
+				<li class="wow pulse bg-green"></li>
+			</ul>
+			<ul class="list1">
+				<li class="wow rubberBand bg-yellow" data-wow-iteration="2" data-wow-duration="0.15s"></li>
+				<li class="wow shake bg-red" data-wow-iteration="2"></li>
+				<li class="wow headShake bg-pink"></li>
+			</ul>
+			<ul class="list1">
+				<li class="wow rollIn bg-pink" data-wow-duration="0.15s"></li>
+				<li class="wow jello bg-blue"></li>
+				<li class="wow bounceInDown bg-purple"></li>
+			</ul>
+			<ul class="list1">
+				<li class="wow rollOut bg-blue"></li>
+				<li class="wow lightSpeedIn bg-purple"></li>
+				<li class="wow rotateOutDownRight bg-green"></li>
+			</ul>
+		</div>
+	</body>
+	<!--2.引入wow.js-->
+	<script type="text/javascript" src="js/wow.js"></script>
+	<script type="text/javascript">
+		if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))){
+	new WOW().init();
+};
+	</script>
+</html>
+<!--<!--官网:http://mynameismatthieu.com/WOW/-->
+<!--源码:https://github.com/matthieua/WOW-->
+<!--README:https://github.com/daneden/animate.css-->
+<!--高级选项(Advanced Option)-->
+<!--data-wow-duration:改变动画时间-->
+<!--data-wow-delay：动画延迟时间-->
+<!--data-wow-offset：距离开始动画，有关浏览器底部-->
+<!--data-wow-iteration:动画的重复次数-->
+
+<!--offset:定义浏览器窗口的底部和顶部之间的距离隐藏的盒子。 当用户滚动和达到这个距离隐藏框显示-->
+<!--类：
+bounce
+flash
+pulse
+rubberBand
+shake
+headShake
+swing
+tada
+wobble
+jello
+bounceIn
+bounceInDown
+bounceInLeft
+bounceInRight
+bounceInUp
+bounceOut
+bounceOutDown
+bounceOutLeft
+bounceOutRight
+bounceOutUp
+fadeIn
+fadeInDown
+fadeInDownBig
+fadeInLeft
+fadeInLeftBig
+fadeInRight
+fadeInRightBig
+fadeInUp
+fadeInUpBig
+fadeOut
+fadeOutDown
+fadeOutDownBig
+fadeOutLeft
+fadeOutLeftBig
+fadeOutRight
+fadeOutRightBig
+fadeOutUp
+fadeOutUpBig
+flipInX
+flipInY
+flipOutX
+flipOutY
+lightSpeedIn
+lightSpeedOut
+rotateIn
+rotateInDownLeft
+rotateInDownRight
+rotateInUpLeft
+rotateInUpRight
+rotateOut
+rotateOutDownLeft
+rotateOutDownRight
+rotateOutUpLeft
+rotateOutUpRight
+hinge
+rollIn
+rollOut
+zoomIn
+zoomInDown
+zoomInLeft
+zoomInRight
+zoomInUp
+zoomOut
+zoomOutDown
+zoomOutLeft
+zoomOutRight
+zoomOutUp
+slideInDown
+slideInLeft
+slideInRight
+slideInUp
+slideOutDown
+slideOutLeft
+slideOutRight
+slideOutUp-->-->

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+*{margin:0;padding:0;}
+body{overflow-x:hidden;font-family:"Microsoft Yahei";}
+body .txt{margin:80px 0;font-size:16px;text-align:center;}
+.dowebok{margin:0 auto;}
+.dowebok ul{list-style-type:none;}
+.dowebok .row{font-size:0;text-align:center;}
+.dowebok .wow{display:inline-block;width:280px;height:280px;margin:30px 15px 0;border-radius:50%;font:30px/280px "Microsoft Yahei";vertical-align:top;*display:inline;zoom:1;}
+.bg-green{background:#5bd5a0;}
+.bg-blue{background:#1daee9;}
+.bg-purple{background:#c843a5;}
+.bg-red{background:#eb3980;}
+.bg-yellow{background:#ffcc35;}
+</style>
+
+<link rel="stylesheet" href="css/animate.css">
+</head>
+<body>
+	<div class="dowebok">
+	<div class="row">
+		<div id="div1" class="wow bg-blue"></div>
+	</div>
+	</div>
+</div>
+<p class="btns"><button>shake</button><button>flash</button><button>swing</button><button>bounce</button><button>tada</button><button>wobble</button><button>pulse</button></p>
+<p class="btns"><button>flip</button><button>flipInX</button><button>flipOutX</button><button>flipInY</button><button>flipOutY</button></p>
+<p class="btns"><button>fadeIn</button><button>fadeInUp</button><button>fadeInDown</button><button>fadeInLeft</button><button>fadeInRight</button><button>fadeInUpBig</button><button>fadeInDownBig</button><button>fadeInLeftBig</button><button>fadeInRightBig</button></p>
+<p class="btns"><button>fadeOut</button><button>fadeOutUp</button><button>fadeOutDown</button><button>fadeOutLeft</button><button>fadeOutRight</button><button>fadeOutUpBig</button><button>fadeOutDownBig</button><button>fadeOutLeftBig</button><button>fadeOutRightBig</button></p>
+<p class="btns"><button>slideInDown</button><button>slideInLeft</button><button>slideInRight</button><button>slideOutUp</button><button>slideOutLeft</button><button>slideOutRight</button></p>
+<p class="btns"><button>bounceIn</button><button>bounceInDown</button><button>bounceInUp</button><button>bounceInLeft</button><button>bounceInRight</button></p>
+<p class="btns"><button>bounceOut</button><button>bounceOutDown</button><button>bounceOutUp</button><button>bounceOutLeft</button><button>bounceOutRight</button></p>
+<p class="btns"><button>rotateIn</button><button>rotateInDownLeft</button><button>rotateInDownRight</button><button>rotateInUpLeft</button><button>rotateInUpRight</button></p>
+<p class="btns"><button>rotateOut</button><button>rotateOutDownLeft</button><button>rotateOutDownRight</button><button>rotateOutUpLeft</button><button>rotateOutUpRight</button></p>
+<p class="btns"><button>lightSpeedIn</button><button>lightSpeedOut</button><button>hinge</button><button>rollIn</button><button>rollOut</button></p>
+<p>
+
+<script src="js/wow.min.js"></script>
+<script type="text/javascript" src="jquery-3.2.0.js"></script>
+<script>
+if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))){
+	new WOW().init();
+};
+
+$('button').on({
+	click:function(){
+		$('#div1').addClass($(this).text());
+	},
+	mouseout:function(){
+		$('#div1').removeClass($(this).text());
+	}
+});
+
+
+</script>
+</body>
+</html>

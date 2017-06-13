@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			body{
+				text-align: center;
+			}
+			#box{
+				display: inline-block;
+				margin-top: 15%;
+			}
+			input[type=search]{
+				float: right;
+				background-color: #fff;
+				border: 1px solid #A9A9A9;
+				padding: 10px;
+				border-radius: 5px;
+				width: 280px;
+				/*outline设置元素周围的轮廓线*/
+				outline: none;
+				margin-right: 7px;
+				transition: all 0.2s;
+			}
+			input[type=search]:focus{
+				width:300px;
+			}
+			::-webkit-input-placeholder{
+				font-family: 'open sans',sans-serif;
+			}
+			input[type=search]:focus{
+				border: 1px solid #000;
+				padding-left: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<!--action 属性：提交表单时，向action的值处发送表单信息-->
+		<form action="http://www.baidu.com">
+			<div style="display: none;">
+				<input type="submit" value=""/>
+			</div>
+		<input type="search" placeholder="search topic"/>	
+		</form>
+		</div>
+	</body>
+</html>

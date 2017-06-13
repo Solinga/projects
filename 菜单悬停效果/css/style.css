@@ -1,0 +1,113 @@
+body{
+	/*flex：弹性布局，为盒状模型提供最大的灵活性*/
+	/*注意：设为flex后，子元素的float，clear，vertical-align属性将失效*/
+	display: flex;
+	/*flex属性：align-items*/
+	/*定义项目在交叉轴上对齐*/
+	/*属性值：flex-start | flex-end | center | baseline | stretch*/
+	align-items: center;
+	/*vh相对于视图的百分之一，假如浏览器高度为1080,1vh=1080/100=10.8px*/
+	height: 100vh;
+	background: #fefefe;
+}
+a{
+	outline: 0;
+	text-decoration: none;
+}
+/*整个导航栏的样式*/
+.navigation{
+	widows: 100%;
+	border-bottom: 3px solid #ccd7d7;
+	font-family: 'Pathway Gothic One',sans-serif;
+	font-size: 22px;
+}
+/*ul样式*/
+.menu{
+	display: flex;
+	/*flex属性：justify-content,定义项目在主轴上的对齐方式*/
+	/*属性值有：flex-start交叉轴的起点对齐,
+	 * flex-end交叉轴的终点对齐,
+	 * center交叉轴的中点对齐,
+	 * baseline项目的第一行文字的基线对齐,
+	 * stretch（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度*/
+	justify-content: center;
+	max-width: 1150px;
+	margin: 0 auto;
+	padding-left: 0;	
+}
+/*li样式*/
+.menu_item{
+	display: inline-block;
+	/*规定段落中的文本不进行换行*/
+	white-space: nowrap;
+}
+/*@media可以根据不同的屏幕尺寸设置不同的样式，设计响应式页面
+ 媒体功能：max-width定义输出设备中的页面最大可见区域宽度*/
+/*如果文档宽度小于480像素时修改样式*/
+@media screen and (max-width:480px ) {
+	/*设置第n+3个li的样式*/
+	.menu_item:nth-child(n+3){
+		display: none;
+	}
+	.menu_item:nth-child(2).menu_link{
+		border-right: 0;
+	}
+}
+@media screen and (max-width:992px ) {
+	.menu_item:nth-child(n+5){
+		display: none;
+	}
+	.menu_item:nth-child(4).menu_link{
+		border-right: 0;
+	}
+}
+.menu__item:last-child .menu__link {
+  border-right: 0;
+}
+.menu_link{
+	display:block;
+	padding: 6px 30px 3px;
+	border-right: 2px dotted #ccd7d7;
+}
+.menu_link:hover .menu_first_word, .menu_link:focus .menu_first_word{
+	transform: translate3d(0,-105%,0);
+}
+.menu_link:hover .menu_second_word, .menu_link:focus .menu_second_word{
+   transform: translate3d(0,105%,0);
+}
+@media screen and (min-width: 768px) {
+  .menu_link {
+    padding: 6px 40px 3px;
+  }
+}
+.menu_title {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.menu_first_word,.menu_second_word {
+  display: inline-block;
+  position: relative;
+  transition: transform .3s;
+}
+.menu_first_word::before,.menu_second_word::before {
+  position: absolute;
+  content: attr(data-hover);
+}
+
+.menu_first_word {
+  color: #0c8040;
+}
+.menu_first_word::before {
+  top: 105%;
+  color: #626262;
+}
+
+.menu_second_word {
+  color: #626262;
+}
+.menu_second_word::before {
+  bottom: 105%;
+  color: #0c8040;
+}
+
